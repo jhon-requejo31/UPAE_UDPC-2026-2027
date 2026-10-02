@@ -1,0 +1,33 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>En un clic · SAE Diagnóstico y caracterización</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="styles.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script></head>
+<body>
+<nav class="side" id="tabs">
+ <div class="brand"><span class="logo">🍽</span><div><b>En un clic</b><small>SAE · Diagnóstico y caracterización</small></div></div>
+ <button data-t="res" class="on">🏠 Resumen ejecutivo</button>
+ <button data-t="am">📝 Ayuda memoria</button>
+ <div class="grp">Análisis</div>
+ <button data-t="ut">🏛 Unidades territoriales</button>
+ <button data-t="mod">🥗 Modalidad y forma</button>
+ <button data-t="tab">📋 Resumen en tablas</button>
+ <button data-t="inf">🏗 Infraestructura 2025</button>
+ <div class="grp">Seguimiento</div>
+ <button data-t="his">📈 Comparación 2026–2027</button>
+ <button data-t="edu">🍼 EDUCUNAS 2026</button>
+ <div class="grp">Territorio</div>
+ <button data-t="grp">🗺 Items de SSEE</button>
+ <button data-t="fic">🏫 Fichas por SSEE</button>
+</nav>
+<div class="main">
+<header class="hero"><div><span class="tag">SAE · Servicio Alimentario Escolar</span><h1 id="ttl"></h1></div>
+ <div class="hr"><button class="btn g" data-x="doc">📄 Word</button><button class="btn g" data-x="pdf">🖨 PDF / Imprimir</button><button class="btn g" data-x="xls">📊 Excel</button><button class="btn g" data-x="csv">⬇ CSV</button><button class="btn g" id="theme" title="Claro/oscuro">🌓</button></div></header>
+<div class="bar"><div class="row" id="filtros"><div id="cmb" class="row"></div>
+ <button class="btn" style="background:#64748b" id="reset">✕ Limpiar</button></div><div class="meta" id="meta"></div></div>
+<main class="wrap" id="out"><div class="card">Cargando datos…</div></main>
+<aside id="ficha" class="ficha" hidden></aside>
+<div class="foot">Fuente: Listado de Servicios Educativos PC 2026–2027 · Infraestructura: Ficha 2025 · EDUCUNAS 2026 · Mapa © OpenStreetMap</div>
+</div>
+<script src="datos.js"></script><script src="cobertura.js"></script><script src="educunas.js"></script><script defer src="script.js"></script></body></html>
